@@ -1,4 +1,4 @@
 BetterHackerNews-Chrome-Extension
 =================================
 
-A Chrome extension for using Hacker News better.
+Boost Hacker News browsing: Mark as read; Add to favorites etc...
