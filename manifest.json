@@ -3,9 +3,9 @@
     "version": "1.0",
     "manifest_version": 2,
     "description": "Boost Hacker News browsing: Mark as read; Add to favorites etc...",
-    "icons": { "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png" 
+    "icons": { "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png" 
     },
     "permissions": [
         "bookmarks",
@@ -13,7 +13,7 @@
     ],
     "content_scripts": [{
       "matches": ["http://news.ycombinator.com/*"],
-      "js": ["jquery.min.js", "hackernews.js"]
+      "js": ["js/jquery.min.js", "js/hackernews.js"]
     }],
     "options_page": "options.html"
 }
