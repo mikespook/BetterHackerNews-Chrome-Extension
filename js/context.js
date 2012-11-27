@@ -1,10 +1,9 @@
-console.debug("Better Hacker News")
-
 function add_bookmark(title, url) {
-    var favorite = localStorage["favorite_dir"];
-    if (!favorite) {
-        favorite = 0;
-    }
-    chrome.bookmarks.create({'parentId': favorite,
-        'title': title, 'url': url});
+    obj = {title: title, url: url, type: 'BOOKMARK'};
+    window.postMessage(obj, "*");
+}
+
+function hide_item(i, url) {
+    obj = {id: i, url: url, type: 'HIDE'};
+    window.postMessage(obj, "*");       
 }

@@ -26,10 +26,39 @@
                 </div>
                 <div id="favorite-alert" class="alert alert-success hide">
                     <button type="button" class="close" data-dismiss="alert">×</button>
-                    <strong>Well done!</strong> All favorite settings are saved!
+                    <strong>Well done!</strong> Favorite settings are saved!
                 </div>
                 <div class="form-actions">
                     <button id="save-favorite" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            <h3>Hiden Options</h3>
+            <div class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="inputWarning">Hide on opening</label>
+                    <div class="controls">
+                        <input id="hide_auto" type="checkbox"> 
+                        <span class="help-inline">Hide the item when the link was opened.</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputWarning">Keeps days</label>
+                    <div class="controls">
+                        <input id="hide_days" type="number" min="1" max="30" value="7">
+                        <span class="help-inline">Items will be kept hidden `n` days.</span>
+                    </div>
+                </div>
+                <div id="hide-alert" class="alert alert-success hide">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Well done!</strong> Hiden settings are saved!
+                </div>
+                <div id="hide-reset-alert" class="alert alert-success hide">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Well done!</strong> Hiden items are reseted!
+                </div>
+                <div class="form-actions">
+                    <button id="save-hide" class="btn btn-primary">Save changes</button>
+                    <button id="reset-hide" class="btn btn-danger">Reset hiden</button>
                 </div>
             </div>
         </div>

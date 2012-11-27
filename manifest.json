@@ -18,5 +18,9 @@
     "options_page": "options.html",
     "web_accessible_resources": [
         "js/context.js"
-    ]
+    ],
+    "background": {
+        "scripts": ["js/event.js"],
+        "persistent": false
+    }
 }
