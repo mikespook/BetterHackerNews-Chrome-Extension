@@ -1,12 +1,11 @@
 // Saves options to localStorage.
 function save_options() {
     localStorage["favorite_dir"] = $('#default-folder').val();
-    console.debug(localStorage["favorite_dir"]);
     // Update status to let user know options were saved.
     var alert = $('#favorite-alert');
-    alert.show();
+    alert.show(200);
     setTimeout(function() {
-        alert.hide();
+        alert.hide(1000);
     }, 5000);
 }
 
@@ -16,20 +15,22 @@ function restore_options() {
     if (!favorite) {
         return;
     }
-    var dir = $('#default-folder');
-    var options = $('option', dir);
+    var folder = $('#default-folder');
+    var options = $('option', folder);
     options.each(function() {
-        if ($(this).text() == favorite)
-        $(this).select();
+        if ($(this).attr('value') == favorite) {
+            console.debug('select: ' + favorite);
+            $(this).attr('selected', '');
+        }
     });
 }
 
 function add_bookmarks(root, bookmarks) {
     bookmarks.forEach(function(bookmark) {
         if (bookmark.children) {
-            root = root + bookmark.title + '/';
-            $('#default-folder').append(new Option(root, bookmark.id));
-            add_bookmarks(root, bookmark.children);
+            var t = root + bookmark.title + '/';
+            $('#default-folder').append(new Option(t, bookmark.id));
+            add_bookmarks(t, bookmark.children);
         }
     });
 } 
@@ -37,11 +38,11 @@ function add_bookmarks(root, bookmarks) {
 function build_selector() {
     chrome.bookmarks.getTree(function(bookmarks) {
         add_bookmarks('', bookmarks);
+        restore_options();
     });
 }
 
 $(document).ready(function(){
     build_selector();
-    restore_options();
     $('#save-favorite').click(save_options);
 })

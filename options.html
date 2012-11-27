@@ -9,72 +9,36 @@
     </head>
     <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
-    <!-- Navbar
-    ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="brand" href="https://github.com/mikespook/BetterHackerNews-Chrome-Extension">Better Hacker News</a>
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li class="">
-                        <a href="./getting-started.html">Donate</a>
-                        </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+        <!-- Navbar
+        ================================================== -->
+        <div id="header"></div>
 
-<!-- Subhead
-================================================== -->
-    <header class="jumbotron subhead" id="overview">
-        <div class="container">
-            <h1>Options</h1>
-            <p class="lead">Boost Hacker News browsing: Mark as read; Add to favorites etc...</p>
-        </div>
-    </header>
-
-    <div class="container">        
-        <h2>Favorite Options</h2>
-        <div class="form-horizontal">
-            <div class="control-group">
-                <label class="control-label" for="inputWarning">Default Folder</label>
-                <div class="controls">
-                    <select id="default-folder">
-                    </select>
-                    <span class="help-inline">Default favorite folder to be saved. <a href="chrome://bookmarks/">Bookmark Manager</a></span>
+        <div class="container">        
+            <h3>Favorite Options</h3>
+            <div class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="inputWarning">Default Folder</label>
+                    <div class="controls">
+                        <select id="default-folder">
+                        </select>
+                        <span class="help-inline">Default favorite folder to be saved.</span>
+                    </div>
+                </div>
+                <div id="favorite-alert" class="alert alert-success hide">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Well done!</strong> All favorite settings are saved!
+                </div>
+                <div class="form-actions">
+                    <button id="save-favorite" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
-            <div id="favorite-alert" class="alert alert-success hide">
-              <button type="button" class="close" data-dismiss="alert">×</button>
-              <strong>Well done!</strong> All favorite settings are saved!
-            </div>
-            <div class="form-actions">
-                <button id="save-favorite" class="btn btn-primary">Save changes</button>
-            </div>
         </div>
-    </div>
-    <!-- Footer
-    ================================================== -->
-    <footer class="footer">
-      <div class="container">
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>By <a href="http://twitter.com/mikespook" target="_blank">@mikespook</a>.</p>
-        <p>Code licensed under <a href="license.html" >MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <ul class="footer-links">
-          <li><a href="http://mikespook.com">Blog</a></li>
-          <li><a href="https://github.com/mikespook/BetterHackerNews-Chrome-Extension/issues?state=open">Issues</a></li>
-          <li><a href="https://github.com/mikespook/BetterHackerNews-Chrome-Extension/wiki">Roadmap and changelog</a></li>
-        </ul>
-      </div>
-    </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/options.js"></script>
-  </body>
+
+        <div id="footer"></div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/options.js"></script>
+        <script src="js/template.js"></script>
+    </body>
 </html>

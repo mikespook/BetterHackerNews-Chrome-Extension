@@ -15,5 +15,8 @@
       "matches": ["http://news.ycombinator.com/*"],
       "js": ["js/jquery.min.js", "js/hackernews.js"]
     }],
-    "options_page": "options.html"
+    "options_page": "options.html",
+    "web_accessible_resources": [
+        "js/context.js"
+    ]
 }
