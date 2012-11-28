@@ -7,3 +7,13 @@ function hide_item(i, url) {
     obj = {id: i, url: url, type: 'HIDE'};
     window.postMessage(obj, "*");       
 }
+
+function click_item(i, url) {
+    obj = {id: i, url: url, type: 'CLICK'};
+    window.postMessage(obj, "*");
+}
+
+$(document).ready(function(){
+
+});
+

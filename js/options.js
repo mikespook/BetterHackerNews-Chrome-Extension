@@ -29,7 +29,9 @@ function add_bookmarks(root, bookmarks) {
     bookmarks.forEach(function(bookmark) {
         if (bookmark.children) {
             var t = root + bookmark.title + '/';
-            $('#default-folder').append(new Option(t, bookmark.id));
+            if (root != '') {
+                $('#default-folder').append(new Option(t, bookmark.id));
+            }
             add_bookmarks(t, bookmark.children);
         }
     });
@@ -67,6 +69,7 @@ function save_hide() {
 
 function reset_hide() {
     for(key in localStorage) {
+        console.debug(key)
         if (key.substr(0, 5) == "HIDE_") {
             localStorage.removeItem(key);        
         }

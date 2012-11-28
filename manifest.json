@@ -17,7 +17,11 @@
     }],
     "options_page": "options.html",
     "web_accessible_resources": [
-        "js/context.js"
+        "js/context.js",
+        "js/jquery.min.js",
+        "js/bootstrap.min.js",
+        "css/bootstrap.min.css",
+        "css/bootstrap-responsive.min.css"
     ],
     "background": {
         "scripts": ["js/event.js"],
